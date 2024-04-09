@@ -1,0 +1,85 @@
+
+
+body h1{
+    display: flex;
+    position: relative;
+    text-align: center;
+    background-color: aliceblue;
+    justify-content: center;
+}
+.main{
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+}
+.container{
+    position: relative;
+    width: 800px;
+    height: 450px;
+    background-color: rgb(84, 57, 91);    
+    outline: solid 1px black;
+    border-color: black;
+    padding: 40px;
+
+}
+
+.first-row, .second-row, .third-row, .forth-row{
+    height: 80px;   
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 40px 20px 40px;
+}
+.first-row .first-circle{
+    width: 70px;
+    height: 70px;
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: peru;
+}
+
+
+.first-row .first-arrow, .second-row .second-arrow, .third-row .third-arrow, .forth-row .forth-arrow{
+    width: 70px;
+    height: 70px;
+}
+.second-row .second-circle{
+    width: 70px;
+    height: 70px;
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: rgb(151, 147, 143);
+}
+
+.third-row .third-circle{
+    width: 70px;
+    height: 70px;
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: rgb(47, 26, 188); 
+}
+.forth-row .forth-circle{
+    width: 70px;
+    height: 70px;
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: rgb(54, 183, 84); 
+}
+
+
+.reset-button{
+    display: flex;
+    justify-content: end;
+}
+
+.reset-button button h3{
+    margin: auto;
+}
+
+.reset-button button{
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+}

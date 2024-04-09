@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .arrow-animation {
+            animation: moveArrow 1s forwards;
+        }
+
+        @keyframes moveArrow {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Bubbles App</h1>
+    <div class="main ">
+        <div class="container">
+            <div class="first-row"> 
+                <div class="first-circle" onclick="moveArrow(this)"></div>
+                <div class="first-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z" data-name="4-Arrow Left"/></svg>
+                </div>
+            </div>
+            <div class="second-row">
+                <div class="second-circle" onclick="moveArrow(this)"></div>
+                <div class="second-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z" data-name="4-Arrow Left"/></svg>
+                </div>
+            </div>
+            <div class="third-row">
+                <div class="third-circle" onclick="moveArrow(this)"></div>
+                <div class="third-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z" data-name="4-Arrow Left"/></svg>
+                </div>
+            </div>
+            <div class="forth-row">
+                <div class="forth-circle" onclick="moveArrow(this)"></div>
+                <div class="forth-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z" data-name="4-Arrow Left"/></svg>
+                </div>
+            </div>
+            <div class="reset-button">
+                <button onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function moveArrow(circle) {
+            var arrow = circle.nextElementSibling;
+
+            if (arrow.classList.contains('arrow-animation')) {
+                arrow.classList.remove('arrow-animation');
+                circle.style.backgroundColor = "";
+            } else {
+                arrow.classList.add('arrow-animation');
+                circle.style.backgroundColor = "green";
+            }
+        }
+
+        function reset() {
+
+            var arrows = document.querySelectorAll('.arrow-animation');
+            arrows.forEach(function (arrow) {
+                arrow.classList.remove('arrow-animation');
+            });
+
+            var circles = document.querySelectorAll('.main .container div[class$="-circle"]');
+            circles.forEach(function (circle) {
+                circle.style.backgroundColor = "";
+            });
+        }
+    </script>
+</body>
+</html>
